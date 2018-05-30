@@ -1,7 +1,12 @@
 {
   "name": "bulmatic",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielsdeboer/bulmatic"
+  },
+  "license": "MIT",
   "scripts": {
     "test": "cross-env NODE_ENV=test nyc mocha-webpack --webpack-config webpack.config.js --require test/setup.js test/**/*.spec.js",
     "test-watch": "cross-env NODE_ENV=test nyc mocha-webpack --watch --mode=development --webpack-config webpack.config.js --require test/setup.js test/**/*.spec.js"
