@@ -9,7 +9,7 @@
   "license": "MIT",
   "main": "src/index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test nyc mocha-webpack --webpack-config webpack.config.js --require test/setup.js test/**/*.spec.js",
+    "test": "cross-env NODE_ENV=test nyc mocha-webpack --mode=development --webpack-config webpack.config.js --require test/setup.js test/**/*.spec.js",
     "test-watch": "cross-env NODE_ENV=test nyc mocha-webpack --watch --mode=development --webpack-config webpack.config.js --require test/setup.js test/**/*.spec.js"
   },
   "description": "Bulma components for Vue",
@@ -25,6 +25,7 @@
     "babel-loader": "^7.1.4",
     "babel-plugin-istanbul": "^4.1.6",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-vue-app": "^2.0.0",
     "cross-env": "^5.1.6",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
