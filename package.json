@@ -7,16 +7,12 @@
     "url": "https://github.com/danielsdeboer/bulmatic"
   },
   "license": "MIT",
+  "main": "index.js",
   "scripts": {
     "test": "cross-env NODE_ENV=test nyc mocha-webpack --webpack-config webpack.config.js --require test/setup.js test/**/*.spec.js",
     "test-watch": "cross-env NODE_ENV=test nyc mocha-webpack --watch --mode=development --webpack-config webpack.config.js --require test/setup.js test/**/*.spec.js"
   },
   "description": "Bulma components for Vue",
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
   "dependencies": {
     "bulma": "^0.7.1",
     "lodash.kebabcase": "^4.1.1",
