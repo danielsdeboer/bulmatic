@@ -26,5 +26,8 @@
         "istanbul"
       ]
     }
-  }
+  },
+  "presets": [
+    "env"
+  ]
 }
