@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "baseUrl": "./",
+        "paths": {
+            "::com/*": [
+                "src/components/*"
+            ],
+            "::def/*": [
+                "src/definitions/*"
+            ],
+            "::fun/*": [
+                "src/functions/*"
+            ],
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
