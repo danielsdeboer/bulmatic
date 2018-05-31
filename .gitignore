@@ -3,6 +3,7 @@ node_modules
 /dist
 package-lock.json
 .nyc_output/*
+coverage/*
 
 # Log files
 npm-debug.log*
