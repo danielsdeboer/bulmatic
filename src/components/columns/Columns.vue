@@ -9,7 +9,7 @@ import props from '../../definitions/props/columns'
 import boolToClass from '../../functions/booleans-to-classes'
 
 export default {
-  props: { ...props.bools },
+  props: Object.assign({}, props.bools),
 
   computed: {
     classes () {
