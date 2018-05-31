@@ -1,12 +1,37 @@
 {
   "env": {
+    "development": {
+      "presets": [
+        [
+          "env",
+          {
+            "modules": false
+          }
+        ]
+      ]
+    },
     "test": {
+      "presets": [
+        [
+          "env",
+          {
+            "modules": false,
+            "targets": {
+              "node": "current"
+            }
+          }
+        ]
+      ],
       "plugins": [
         "istanbul"
       ]
     }
   },
   "presets": [
-    "vue-app"
+    "es2015"
+  ],
+  "plugins": [
+    "babel-plugin-transform-es2015-destructuring",
+    "babel-plugin-transform-object-rest-spread"
   ]
 }
