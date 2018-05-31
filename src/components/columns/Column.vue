@@ -34,7 +34,7 @@
           this.sizeClass,
           this.offsetClass,
         ]
-      },
+      }
     },
   }
 </script>
