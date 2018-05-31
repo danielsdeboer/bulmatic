@@ -39,7 +39,7 @@
   }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
   @import "~bulma/sass/utilities/_all"
   @import "~bulma/sass/grid/columns"
 </style>

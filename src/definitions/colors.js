@@ -34,6 +34,10 @@ export const button = [
   'text',
 ]
 
+export const message = [
+  'dark',
+]
+
 /**
  * Combine objects by name.
  * @param {string[]} groups

@@ -22,6 +22,13 @@ export const column = [
   '12',
 ]
 
+export const generic = [
+  'small',
+  'medium',
+  'large',
+]
+
 export default {
   column,
+  generic,
 }
