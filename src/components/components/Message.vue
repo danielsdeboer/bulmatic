@@ -1,44 +1,44 @@
 <template>
   <div class="message" :class="classes">
     <MessageHeader
-      v-if="has('headerText')"
-      :text="headerText"
+      v-if="hasHeaderText"
+      :text-content="headerText"
       :has-button="hasButton"
     />
 
     <MessageBody
-      :text="bodyText"
-    />
-
-    <slot/>
+      :text-content="bodyText"
+    >
+      <slot/>
+    </MessageBody>
   </div>
 </template>
 
 <script>
+import { str, bool } from '../../functions/validators'
+import stringsToClasses from '../../functions/strings-to-classes'
+import props, { strings } from '../../definitions/props/message'
 import MessageHeader from './Message/Header.vue'
 import MessageBody from './Message/Body.vue'
-
-import { str, multi } from '::func/validator-factory'
-
-const colors = ['danger', 'warning', 'success', 'info', 'link', 'primary', 'dark']
-const sizes = ['small', 'medium', 'large']
 
 export default {
   props: {
     headerText: str(false),
-    hasButton: str(false),
-    bodyText: multi([Array, String], false),
-    size: str(false, sizes),
-    color: str(false, colors),
+    bodyText: str(false),
+    hasButton: bool(false),
+    ...props,
   },
 
   components: { MessageHeader, MessageBody },
 
   computed: {
     classes () {
-      return [bulmaClass(this.color), bulmaClass(this.size)]
+      return stringsToClasses(this, strings)
     },
 
+    hasHeaderText () {
+      return !!this.headerText
+    },
   },
 }
 </script>

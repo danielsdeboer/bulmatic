@@ -1,6 +1,6 @@
 import { bool } from '../../functions/validators'
 
-const bools = {
+export const bools = {
   isGapless: bool(false),
   isMultiline: bool(false),
   isMobile: bool(false),
@@ -8,5 +8,5 @@ const bools = {
 }
 
 export default {
-  bools,
+  ...bools,
 }

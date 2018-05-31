@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import expect from 'expect'
-import props from '::def/props/columns'
+import { bools } from '::def/props/columns'
 import boolPropsTest from '../functions/bool-props-test'
 
 import Columns from '../../src/components/columns/Columns.vue'
@@ -14,7 +14,7 @@ describe('Columns', () => {
     },
   })
 
-  const bools = Object.keys(props.bools)
+  const boolProps = Object.keys(bools)
 
   beforeEach(() => {
     component = fresh()
@@ -28,5 +28,5 @@ describe('Columns', () => {
     expect(component.findAll('div.test-div').length).toBe(1)
   })
 
-  boolPropsTest(bools, 'div.columns', fresh)
+  boolPropsTest(boolProps, 'div.columns', fresh)
 })

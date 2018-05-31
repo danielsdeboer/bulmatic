@@ -1,12 +1,14 @@
-import { str, multi } from '../../functions/validators'
+import { str, multi, bool } from '../../functions/validators'
 import { generic } from '../../definitions/sizes'
-import { combine } from '../../definitions/colors'
+import colors from '../../definitions/colors'
+
+export const bools = {
+  hasButton: bool(false),
+}
 
 export const strings = {
-  headerText: str(false),
-  hasButton: str(false),
   size: str(false, generic),
-  color: str(false, combine('bulma', 'message')),
+  color: str(false, colors.combine('bulma', 'message')),
 }
 
 export const multiple = {

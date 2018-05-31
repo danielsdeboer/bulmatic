@@ -5,15 +5,15 @@
 </template>
 
 <script>
-import props from '../../definitions/props/columns'
+import props, { bools } from '../../definitions/props/columns'
 import boolToClass from '../../functions/booleans-to-classes'
 
 export default {
-  props: Object.assign({}, props.bools),
+  props,
 
   computed: {
     classes () {
-      return boolToClass(this, props.bools)
+      return boolToClass(this, bools)
     },
   },
 }

@@ -16,5 +16,8 @@ module.exports = {
   settings: {
    'import/resolver': 'webpack'
   },
+  rules: {
+    'import/no-named-as-default-member': 'off'
+  },
   root: true,
 }

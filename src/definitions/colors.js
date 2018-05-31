@@ -42,7 +42,7 @@ export const message = [
  * Combine objects by name.
  * @param {string[]} groups
  */
-export const combine = function combile (...groups) {
+export const combine = function combine (...groups) {
   return [].concat(...groups.map(
     prop => this[prop] || [])
   )
