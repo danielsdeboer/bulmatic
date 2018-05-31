@@ -14,10 +14,7 @@ module.exports = {
     'dbt',
   ],
   settings: {
-   'import/resolver': {
-      webpack: {
-        config: path.resolve('./webpack.config.js'),
-      },
-    }
+   'import/resolver': 'webpack'
   },
+  root: true,
 }
