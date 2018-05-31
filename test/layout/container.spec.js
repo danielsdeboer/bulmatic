@@ -7,7 +7,13 @@ import Container from '../../src/components/layout/Container.vue'
 
 describe('Container', () => {
   let component
-  const fresh = () => mount(Container)
+
+  const fresh = () => mount(Container, {
+    slots: {
+      default: '<div class="test-div"></div>',
+    },
+  })
+
   const boolProps = Object.keys(bools)
 
   beforeEach(() => {
@@ -16,6 +22,10 @@ describe('Container', () => {
 
   it('outputs a container div', () => {
     expect(component.is('div.container')).toBe(true)
+  })
+
+  it('slots content', () => {
+    expect(component.findAll('div.test-div').length).toBe(1)
   })
 
   boolPropsTest(boolProps, 'div.container', fresh)

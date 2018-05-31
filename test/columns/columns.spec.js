@@ -7,7 +7,13 @@ import Columns from '../../src/components/columns/Columns.vue'
 
 describe('Columns', () => {
   let component
-  const fresh = () => mount(Columns)
+
+  const fresh = () => mount(Columns, {
+    slots: {
+      default: '<div class="test-div"></div>',
+    },
+  })
+
   const bools = Object.keys(props.bools)
 
   beforeEach(() => {
@@ -16,6 +22,10 @@ describe('Columns', () => {
 
   it('outputs a div with a columns class', () => {
     expect(component.is('div.columns')).toBe(true)
+  })
+
+  it('slots content', () => {
+    expect(component.findAll('div.test-div').length).toBe(1)
   })
 
   boolPropsTest(bools, 'div.columns', fresh)
