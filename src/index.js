@@ -6,6 +6,7 @@ import LevelLeft from './components/layout/Level/Left.vue'
 import LevelRight from './components/layout/Level/Right.vue'
 import LevelItem from './components/layout/Level/Item.vue'
 import Message from './components/components/Message.vue'
+import Section from './components/layout/Section.vue'
 
 export {
   Columns,
@@ -15,5 +16,6 @@ export {
   LevelLeft,
   LevelRight,
   LevelItem,
-  Message
+  Message,
+  Section
 }

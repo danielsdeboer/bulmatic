@@ -30,6 +30,5 @@
 
 <style lang="sass">
   @import "~bulma/sass/utilities/_all"
-  @import "~bulma/sass/components/message"
   @import "~bulma/sass/elements/other"
 </style>
