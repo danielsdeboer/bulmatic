@@ -36,12 +36,25 @@ describe('Container', () => {
     ).toBe('test string')
   })
 
+  it('translates the color prop to a css class', () => {
+    wrapper.setProps({ color: 'danger' })
+
+    expect(wrapper.is('div.is-danger')).toBe(true)
+  })
+
+  it('translates the size prop to a css class', () => {
+    wrapper.setProps({ size: 'large' })
+
+    expect(wrapper.is('div.is-large')).toBe(true)
+  })
+
   it('has a header when header-text is set', () => {
     expect(wrapper.contains('div.message-header')).toBe(false)
 
     wrapper.setProps({ headerText: 'test header' })
 
-    expect(wrapper.find('div.message-header').contains('test header'))
+    expect(wrapper.contains('div.message-header')).toBe(true)
+    expect(wrapper.find('div.message-header').text()).toBe('test header')
   })
 
   it('has a button when has-button is true', () => {

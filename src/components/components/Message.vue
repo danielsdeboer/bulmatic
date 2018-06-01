@@ -23,12 +23,11 @@ import MessageHeader from './Message/Header.vue'
 import MessageBody from './Message/Body.vue'
 
 export default {
-  props: {
+  props: Object.assign({
     headerText: str(false),
     bodyText: str(false),
     hasButton: bool(false),
-    ...props,
-  },
+  }, props),
 
   components: { MessageHeader, MessageBody },
 
