@@ -51,4 +51,14 @@ describe('Container', () => {
 
     expect(wrapper.contains('button.delete')).toBe(true)
   })
+
+  it('listens for and emits a close-message event', () => {
+    wrapper.setProps({ hasButton: true, headerText: 'test' })
+
+    const button = wrapper.find('button.delete')
+
+    button.trigger('click')
+
+    expect(wrapper.emitted('close-message')).toBeTruthy()
+  })
 })

@@ -3,6 +3,7 @@
     {{ textContent }}
 
     <button
+      @click.once="emitCloseMessage"
       v-if="hasButton"
       class="delete"
     />
@@ -18,10 +19,17 @@
       textContent: str(true),
       hasButton: bool(false),
     },
+
+    methods: {
+      emitCloseMessage () {
+        this.$emit('close-message')
+      },
+    },
   }
 </script>
 
 <style lang="sass">
   @import "~bulma/sass/utilities/_all"
   @import "~bulma/sass/components/message"
+  @import "~bulma/sass/elements/other"
 </style>

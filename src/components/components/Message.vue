@@ -1,6 +1,7 @@
 <template>
   <div class="message" :class="classes">
     <MessageHeader
+      @close-message="emitCloseMessage"
       v-if="hasHeaderText"
       :text-content="headerText"
       :has-button="hasButton"
@@ -38,6 +39,12 @@ export default {
 
     hasHeaderText () {
       return !!this.headerText
+    },
+  },
+
+  methods: {
+    emitCloseMessage () {
+      this.$emit('close-message')
     },
   },
 }
