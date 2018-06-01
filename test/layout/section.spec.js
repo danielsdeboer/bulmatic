@@ -26,4 +26,10 @@ describe('Section', () => {
 
     expect(wrapper.is('section.section.is-medium')).toBe(true)
   })
+
+  it('can be set to in-flow', () => {
+    wrapper.setProps({ isInFlow: true })
+
+    expect(wrapper.is('section.section.is-in-flow')).toBe(true)
+  })
 })

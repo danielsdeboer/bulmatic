@@ -1,8 +1,12 @@
-import { str } from '../../functions/validators'
+import { str, bool } from '../../functions/validators'
 import { generic } from '../../definitions/sizes'
+
+export const bools = {
+  isInFlow: bool(false),
+}
 
 export const strings = {
   size: str(false, generic),
 }
 
-export default Object.assign({}, strings)
+export default Object.assign({}, strings, bools)
