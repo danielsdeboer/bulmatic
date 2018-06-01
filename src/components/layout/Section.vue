@@ -16,11 +16,19 @@
     props,
 
     computed: {
+      stringClasses () {
+        return strToClass(this, strings)
+      },
+
+      boolClasses () {
+        return boolToClass(this, bools)
+      },
+
       classes () {
-        return [].concat(
-          strToClass(this, strings),
-          boolToClass(this, bools),
-        )
+        return [
+          ...this.stringClasses,
+          ...this.boolClasses,
+        ]
       },
     },
   }
