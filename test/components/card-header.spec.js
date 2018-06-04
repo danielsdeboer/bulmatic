@@ -2,6 +2,7 @@ import { mount } from '@vue/test-utils'
 import expect from 'expect'
 
 import Header from '../../src/components/components/Card/Header.vue'
+import Icon from '../../src/components/elements/Icon.vue'
 
 describe('Container', () => {
   let wrapper
@@ -23,8 +24,20 @@ describe('Container', () => {
   })
 
   it('includes an icon if icon props are used', () => {
+    expect(wrapper.contains('.icon')).toBe(false)
+
     wrapper.setProps({ iconClass: 'fas fa-user' })
 
     expect(wrapper.contains('.icon')).toBe(true)
+  })
+
+  it('emits a icon-clicked event when the icon is clicked', () => {
+    wrapper.setProps({ iconClass: 'fas fa-user' })
+
+    const icon = wrapper.find(Icon)
+
+    icon.trigger('click')
+
+    expect(wrapper.emitted('icon-clicked')).toBeTruthy()
   })
 })
