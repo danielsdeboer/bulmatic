@@ -18,7 +18,8 @@
 <script>
 import { str, bool } from '../../functions/validators'
 import stringsToClasses from '../../functions/strings-to-classes'
-import props, { strings } from '../../definitions/props/message'
+import boolsToClasses from '../../functions/booleans-to-classes'
+import props, { strings, bools } from '../../definitions/props/message'
 import MessageHeader from './Message/Header.vue'
 import MessageBody from './Message/Body.vue'
 
@@ -33,6 +34,17 @@ export default {
 
   computed: {
     classes () {
+      return [
+        ...this.boolClasses,
+        ...this.stringClasses,
+      ]
+    },
+
+    boolClasses () {
+      return boolsToClasses(this, bools)
+    },
+
+    stringClasses () {
       return stringsToClasses(this, strings)
     },
 
@@ -53,3 +65,10 @@ export default {
   @import "~bulma/sass/utilities/_all"
   @import "~bulma/sass/components/message"
 </style>
+
+<style lang="sass" scoped>
+  .is-bordered
+    .message-body
+      border-width: 1px
+</style>
+

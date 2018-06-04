@@ -74,4 +74,10 @@ describe('Container', () => {
 
     expect(wrapper.emitted('close-message')).toBeTruthy()
   })
+
+  it('has a border when is-bordered is true', () => {
+    wrapper.setProps({ isBordered: true })
+
+    expect(wrapper.is('.message.is-bordered'))
+  })
 })

@@ -3,7 +3,7 @@ import { generic } from '../../definitions/sizes'
 import colors from '../../definitions/colors'
 
 export const bools = {
-  hasButton: bool(false),
+  isBordered: bool(false),
 }
 
 export const strings = {
@@ -18,5 +18,6 @@ export const multiple = {
 export default {
   ...strings,
   ...multiple,
+  ...bools,
 }
 
