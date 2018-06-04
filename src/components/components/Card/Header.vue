@@ -6,14 +6,14 @@
     />
 
     <a
-      @click.prevent="emitIconClicked"
+      @click.prevent="emitIconClick"
       v-if="hasIcon"
       href="#"
       class="card-header-icon"
     >
       <Icon
         :color="iconColor"
-        :icon="iconClass"
+        :icon="icon"
         :size="iconSize"
       />
     </a>
@@ -27,7 +27,7 @@
   export default {
     props: {
       textContent: str(true),
-      iconClass: str(false),
+      icon: str(false),
       iconColor: str(false),
       iconSize: str(false),
     },
@@ -38,13 +38,13 @@
 
     computed: {
       hasIcon () {
-        return !!this.iconClass
+        return !!this.icon
       },
     },
 
     methods: {
-      emitIconClicked () {
-        this.$emit('icon-clicked')
+      emitIconClick () {
+        this.$emit('icon-click')
       },
     },
   }

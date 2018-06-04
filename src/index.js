@@ -8,6 +8,8 @@ import LevelItem from './components/layout/Level/Item.vue'
 import Message from './components/components/Message.vue'
 import Section from './components/layout/Section.vue'
 import Icon from './components/elements/Icon.vue'
+import Card from './components/components/Card.vue'
+import CardFooterItem from './components/components/Card/Footer/Item.vue'
 
 export {
   Columns,
@@ -19,5 +21,7 @@ export {
   LevelItem,
   Message,
   Section,
-  Icon
+  Icon,
+  Card,
+  CardFooterItem
 }

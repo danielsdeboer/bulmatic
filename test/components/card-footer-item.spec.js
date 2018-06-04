@@ -27,4 +27,15 @@ describe('Container', () => {
 
     expect(wrapper.emitted('footer-item-click')).toBeTruthy()
   })
+
+  it('attaches the item name as a payload if set', () => {
+    wrapper.trigger('click')
+
+    expect(wrapper.emitted('footer-item-click')[0]).toEqual([{ itemName: '' }])
+
+    wrapper.setProps({ itemName: 'testing' })
+    wrapper.trigger('click')
+
+    expect(wrapper.emitted('footer-item-click')[1]).toEqual([{ itemName: 'testing' }])
+  })
 })

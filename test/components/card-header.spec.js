@@ -26,18 +26,18 @@ describe('Container', () => {
   it('includes an icon if icon props are used', () => {
     expect(wrapper.contains('.icon')).toBe(false)
 
-    wrapper.setProps({ iconClass: 'fas fa-user' })
+    wrapper.setProps({ icon: 'fas fa-user' })
 
     expect(wrapper.contains('.icon')).toBe(true)
   })
 
-  it('emits a icon-clicked event when the icon is clicked', () => {
-    wrapper.setProps({ iconClass: 'fas fa-user' })
+  it('emits a icon-click event when the icon is clicked', () => {
+    wrapper.setProps({ icon: 'fas fa-user' })
 
     const icon = wrapper.find(Icon)
 
     icon.trigger('click')
 
-    expect(wrapper.emitted('icon-clicked')).toBeTruthy()
+    expect(wrapper.emitted('icon-click')).toBeTruthy()
   })
 })

@@ -9,10 +9,18 @@
 </template>
 
 <script>
+  import { str } from '../../../../functions/validators'
+
   export default {
+    props: {
+      itemName: str(false),
+    },
+
     methods: {
       emitFooterItemClick () {
-        this.$emit('footer-item-click')
+        this.$emit('footer-item-click', {
+          itemName: this.itemName || '',
+        })
       },
     },
   }
