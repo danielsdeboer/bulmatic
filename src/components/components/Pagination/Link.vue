@@ -4,17 +4,26 @@
       class="pagination-link"
       :class="classes"
     >
-      <slot/>
+      <template
+        v-if="hasTextContent"
+      >
+        {{ textContent }}
+      </template>
+
+      <slot
+        v-else
+      />
     </a>
   </li>
 </template>
 
 <script>
-  import { bool } from '../../../functions/validators'
+  import { bool, str } from '../../../functions/validators'
 
   export default {
     props: {
       isCurrent: bool(false),
+      textContent: str(false),
     },
 
     computed: {
@@ -22,6 +31,10 @@
         return {
           'is-current': this.isCurrent,
         }
+      },
+
+      hasTextContent () {
+        return !!this.textContent
       },
     },
   }

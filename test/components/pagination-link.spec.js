@@ -22,6 +22,14 @@ describe('Container', () => {
     expect(wrapper.find('a').text()).toBe('67')
   })
 
+  it('alternatively takes a textContent prop', () => {
+    wrapper = mount(Link, { propsData: { textContent: '88' } })
+
+    console.log(wrapper.html())
+
+    expect(wrapper.find('a').text()).toBe('88')
+  })
+
   it('has an is-current prop', () => {
     expect(wrapper.find('a').is('.is-current')).toBe(false)
 
