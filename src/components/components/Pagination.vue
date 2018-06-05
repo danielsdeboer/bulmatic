@@ -6,11 +6,13 @@
       <PaginationIncremental
         direction="previous"
         :is-disabled="previousIsDisabled"
+        @previous-page="emitPageChange('previous')"
       />
 
       <PaginationIncremental
         direction="next"
         :is-disabled="nextIsDisabled"
+        @next-page="emitPageChange('next')"
       />
     </template>
 
@@ -56,6 +58,12 @@ export default {
 
     boolClasses () {
       return boolsToClasses(this, bools)
+    },
+  },
+
+  methods: {
+    emitPageChange (direction) {
+      this.$emit(`${direction}-page`)
     },
   },
 }

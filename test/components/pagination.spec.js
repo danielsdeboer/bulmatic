@@ -68,4 +68,24 @@ describe('Container', () => {
       expect(wrapper.is(`.is-${size}`)).toBe(true)
     })
   })
+
+  it('catches and re-emits previous-page events', () => {
+    const el = wrapper.find('a.pagination-previous')
+
+    expect(wrapper.emitted('previous-page')).toBeFalsy()
+
+    el.trigger('click')
+
+    expect(wrapper.emitted('previous-page')).toBeTruthy()
+  })
+
+  it('catches and re-emits next-page events', () => {
+    const el = wrapper.find('a.pagination-next')
+
+    expect(wrapper.emitted('next-page')).toBeFalsy()
+
+    el.trigger('click')
+
+    expect(wrapper.emitted('next-page')).toBeTruthy()
+  })
 })
