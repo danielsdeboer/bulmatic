@@ -18,6 +18,7 @@
   "dependencies": {
     "bulma": "^0.7.1",
     "lodash.kebabcase": "^4.1.1",
+    "lodash.startcase": "^4.4.0",
     "vue": "^2.5.16"
   },
   "devDependencies": {

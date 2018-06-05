@@ -10,6 +10,10 @@ import Section from './components/layout/Section.vue'
 import Icon from './components/elements/Icon.vue'
 import Card from './components/components/Card.vue'
 import CardFooterItem from './components/components/Card/Footer/Item.vue'
+import Pagination from './components/components/Pagination.vue'
+import PaginationIncremental from './components/components/Pagination/Incremental.vue'
+import PaginationLink from './components/components/Pagination/Link.vue'
+import PaginationEllipsis from './components/components/Pagination/Ellipsis.vue'
 
 export {
   Columns,
@@ -23,5 +27,9 @@ export {
   Section,
   Icon,
   Card,
-  CardFooterItem
+  CardFooterItem,
+  Pagination,
+  PaginationEllipsis,
+  PaginationIncremental,
+  PaginationLink
 }

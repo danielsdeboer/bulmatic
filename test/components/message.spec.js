@@ -1,7 +1,5 @@
 import { mount } from '@vue/test-utils'
 import expect from 'expect'
-// import { bools } from '::def/props/level'
-// import boolPropsTest from '../functions/bool-props-test'
 
 import Message from '../../src/components/components/Message.vue'
 import MessageBody from '../../src/components/components/Message/Body.vue'
