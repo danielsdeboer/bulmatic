@@ -3,6 +3,7 @@
     :class="cssClass"
     v-text="text"
     :disabled="isDisabled"
+    @click.prevent="emitPageChange($event.target.attributes)"
   />
 </template>
 
@@ -24,6 +25,14 @@
 
       text () {
         return this.textContent || startCase(this.direction)
+      },
+    },
+
+    methods: {
+      emitPageChange (attr) {
+        if (!attr.disabled) {
+          this.$emit(`${this.direction}-page`)
+        }
       },
     },
   }

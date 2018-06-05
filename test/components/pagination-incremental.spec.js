@@ -39,4 +39,23 @@ describe('Container', () => {
 
     expect(wrapper.attributes().disabled).toBe('disabled')
   })
+
+  it('emits a page change event when clicked', () => {
+    wrapper.trigger('click')
+
+    expect(wrapper.emitted('previous-page')).toBeTruthy()
+
+    wrapper.setProps({ direction: 'next' })
+    wrapper.trigger('click')
+
+    expect(wrapper.emitted('next-page')).toBeTruthy()
+  })
+
+  it('emits no event when disabled', () => {
+    wrapper.setProps({ isDisabled: true })
+    wrapper.trigger('click')
+
+    expect(wrapper.emitted('previous-page')).toBe(undefined)
+    expect(wrapper.emitted('next-page')).toBe(undefined)
+  })
 })
