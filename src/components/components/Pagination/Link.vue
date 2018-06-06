@@ -18,12 +18,12 @@
 </template>
 
 <script>
-  import { bool, str } from '../../../functions/validators'
+  import { bool, multi } from '../../../functions/validators'
 
   export default {
     props: {
       isCurrent: bool(false),
-      textContent: str(false),
+      textContent: multi([String, Number], false),
     },
 
     computed: {
