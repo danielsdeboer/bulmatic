@@ -14,6 +14,7 @@ import Pagination from './components/components/Pagination.vue'
 import PaginationIncremental from './components/components/Pagination/Incremental.vue'
 import PaginationLink from './components/components/Pagination/Link.vue'
 import PaginationEllipsis from './components/components/Pagination/Ellipsis.vue'
+import Hero from './components/layout/Hero.vue'
 
 export {
   Columns,
@@ -31,5 +32,6 @@ export {
   Pagination,
   PaginationEllipsis,
   PaginationIncremental,
-  PaginationLink
+  PaginationLink,
+  Hero
 }
