@@ -22,10 +22,18 @@ export const column = [
   '12',
 ]
 
+export const small = 'small'
+export const medium = 'medium'
+export const large = 'large'
+
 export const generic = [
-  'small',
-  'medium',
-  'large',
+  small,
+  medium,
+  large,
+]
+
+export const hero = [
+  'fullheight',
 ]
 
 export default {

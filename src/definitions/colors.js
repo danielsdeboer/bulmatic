@@ -1,3 +1,13 @@
+/**
+ * Combine objects by name.
+ * @param {string[]} groups
+ */
+export const combine = function combine (...groups) {
+  return [].concat(...groups.map(
+    prop => this[prop] || [])
+  )
+}
+
 export const base = [
   'white',
   'light',
@@ -37,16 +47,6 @@ export const button = [
 export const message = [
   'dark',
 ]
-
-/**
- * Combine objects by name.
- * @param {string[]} groups
- */
-export const combine = function combine (...groups) {
-  return [].concat(...groups.map(
-    prop => this[prop] || [])
-  )
-}
 
 export default {
   base,
