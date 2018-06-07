@@ -115,4 +115,25 @@ describe('Button', () => {
 
     expect(wrapper.contains('i.fas.fa-user')).toBe(true)
   })
+
+  it('renders only an icon if no text-content or slotted content is provided', () => {
+    wrapper.setProps({ icon: 'fas fa-user' })
+
+    expect(wrapper.findAll('span').length).toBe(1)
+
+    wrapper.setProps({ textContent: 'testing' })
+
+    expect(wrapper.findAll('span').length).toBe(2)
+
+    wrapper = mount(Button, {
+      slots: {
+        default: 'testing slots',
+      },
+      propsData: {
+        icon: 'fas fa-user',
+      },
+    })
+
+    expect(wrapper.findAll('span').length).toBe(2)
+  })
 })

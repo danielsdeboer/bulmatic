@@ -40,12 +40,13 @@
       },
 
       hasIconContent () {
+        const content = this.defaultContent
+          ? this.$createElement('span', this.defaultContent)
+          : null
+
         return [
           this.$createElement(Icon, { props: { icon: this.icon } }),
-          this.$createElement(
-            'span',
-            this.defaultContent
-          ),
+          content,
         ]
       },
 
@@ -78,7 +79,7 @@
   }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
   @import "~bulma/sass/utilities/_all"
   @import "~bulma/sass/elements/button.sass"
 </style>
