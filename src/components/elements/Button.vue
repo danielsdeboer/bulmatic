@@ -1,23 +1,79 @@
 <script>
   import { str } from '../../functions/validators'
+  import props, { strings, bools } from '../../definitions/props/button'
+  import stringsToClasses from '../../functions/strings-to-classes'
+  import boolsToClasses from '../../functions/booleans-to-classes'
+  import Icon from './Icon.vue'
 
   export default {
-    functional: true,
-
-    render (h, { props }) {
+    render (h) {
       return h(
-        props.tag,
+        this.tag,
         {
-          class: 'button',
+          class: this.cssClasses,
+          attrs: this.htmlAttributes,
         },
-        [
-          'test text',
-        ]
+        this.content
       )
     },
 
-    props: {
+    props: Object.assign(props, {
       tag: str('button', ['button', 'a', 'input']),
+      textContent: str(false),
+      inputType: str('submit'),
+      icon: str(false),
+    }),
+
+    components: {
+      Icon,
+    },
+
+    computed: {
+      content () {
+        return this.hasIcon
+          ? this.hasIconContent
+          : this.defaultContent
+      },
+
+      defaultContent () {
+        return this.$slots.default || this.textContent
+      },
+
+      hasIconContent () {
+        return [
+          this.$createElement(Icon, { propsData: { icon: 'fas fa-user' } }),
+          this.$createElement(
+            'span',
+            'some words'
+          ),
+        ]
+      },
+
+      hasIcon () {
+        return !!this.icon
+      },
+
+      htmlAttributes () {
+        return this.tag === 'input'
+          ? { type: this.inputType }
+          : {}
+      },
+
+      cssClasses () {
+        return [
+          'button',
+          ...this.stringClasses,
+          ...this.boolClasses,
+        ]
+      },
+
+      stringClasses () {
+        return stringsToClasses(this, strings)
+      },
+
+      boolClasses () {
+        return boolsToClasses(this, bools)
+      },
     },
   }
 </script>

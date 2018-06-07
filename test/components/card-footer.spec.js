@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import expect from 'expect'
 
-import Footer from '../../src/components/components/Card/Footer.vue'
+import Footer from '../../src/components/components/Card/Footer'
 
 describe('Container', () => {
   let wrapper
