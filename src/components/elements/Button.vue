@@ -41,10 +41,10 @@
 
       hasIconContent () {
         return [
-          this.$createElement(Icon, { propsData: { icon: 'fas fa-user' } }),
+          this.$createElement(Icon, { props: { icon: this.icon } }),
           this.$createElement(
             'span',
-            'some words'
+            this.defaultContent
           ),
         ]
       },

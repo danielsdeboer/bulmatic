@@ -113,8 +113,6 @@ describe('Button', () => {
   it('optionally includes an icon', () => {
     wrapper.setProps({ icon: 'fas fa-user' })
 
-    out()
-
     expect(wrapper.contains('i.fas.fa-user')).toBe(true)
   })
 })
