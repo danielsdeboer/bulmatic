@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Icon from '../../src/components/elements/Icon.vue'
 
-describe('Container', () => {
+describe('Icon', () => {
   let wrapper
 
   beforeEach(() => {

@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Hero from '../../src/components/layout/Hero.vue'
 
-describe('Container', () => {
+describe('Hero', () => {
   let wrapper
 
   beforeEach(() => {

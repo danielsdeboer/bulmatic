@@ -7,7 +7,7 @@ import boolPropsTest from '../functions/bool-props-test'
 
 import Level from '../../src/components/layout/Level.vue'
 
-describe('Container', () => {
+describe('Level', () => {
   const slots = {
     default: '<div class="default-slot"/>',
     left: '<div class="left-slot"/>',

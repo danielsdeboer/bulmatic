@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import MessageHeader from '../../src/components/components/Message/Header.vue'
 
-describe('Container', () => {
+describe('Message Header', () => {
   let wrapper
 
   beforeEach(() => {

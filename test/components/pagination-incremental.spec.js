@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Incremental from '../../src/components/components/Pagination/Incremental.vue'
 
-describe('Container', () => {
+describe('Pagination Incremental', () => {
   let wrapper
 
   beforeEach(() => {

@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Footer from '../../src/components/components/Card/Footer'
 
-describe('Container', () => {
+describe('Card Footer', () => {
   let wrapper
 
   beforeEach(() => {

@@ -4,7 +4,7 @@ import expect from 'expect'
 import Header from '../../src/components/components/Card/Header.vue'
 import Icon from '../../src/components/elements/Icon.vue'
 
-describe('Container', () => {
+describe('Card Header', () => {
   let wrapper
 
   beforeEach(() => {

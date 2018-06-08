@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Card from '../../src/components/components/Card.vue'
 
-describe('Container', () => {
+describe('Card', () => {
   let wrapper
 
   beforeEach(() => {

@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Head from '../../src/components/components/Modal/Card/Head'
 
-describe('Container', () => {
+describe('Modal Card Head', () => {
   let wrapper
 
   beforeEach(() => {

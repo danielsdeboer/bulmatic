@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import List from '../../src/components/components/Pagination/List.vue'
 
-describe('Container', () => {
+describe('Pagination List', () => {
   let wrapper
 
   beforeEach(() => {

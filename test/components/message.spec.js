@@ -4,7 +4,7 @@ import expect from 'expect'
 import Message from '../../src/components/components/Message.vue'
 import MessageBody from '../../src/components/components/Message/Body.vue'
 
-describe('Container', () => {
+describe('Message', () => {
   let wrapper
   const slot = { default: '<div class="test-div"/>' }
 

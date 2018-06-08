@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Background from '../../src/components/components/Modal/Background'
 
-describe('Container', () => {
+describe('Modal Background', () => {
   let wrapper
 
   beforeEach(() => {

@@ -1,4 +1,5 @@
 import Title from './Title'
+import CloseButton from './CloseButton'
 
 export default {
   functional: true,
@@ -9,7 +10,10 @@ export default {
     [
       h(
         Title,
-        ctx.slots().default
+        ctx.props.textContent || ctx.slots().default
+      ),
+      h(
+        CloseButton
       ),
     ]
   ),

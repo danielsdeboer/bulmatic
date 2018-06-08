@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Link from '../../src/components/components/Pagination/Link.vue'
 
-describe('Container', () => {
+describe('Pagination Link', () => {
   let wrapper
 
   beforeEach(() => {

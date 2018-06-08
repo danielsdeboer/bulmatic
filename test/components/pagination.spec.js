@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Pagination from '../../src/components/components/Pagination.vue'
 
-describe('Container', () => {
+describe('Pagination', () => {
   let wrapper
   const slot = '<li class="some-thing"/>'
 

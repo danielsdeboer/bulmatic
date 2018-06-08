@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Modal from '../../src/components/components/Modal.vue'
 
-describe('Container', () => {
+describe('Modal', () => {
   let wrapper
 
   beforeEach(() => {

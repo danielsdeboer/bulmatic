@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Ellipsis from '../../src/components/components/Pagination/Ellipsis.vue'
 
-describe('Container', () => {
+describe('Pagination Ellipsis', () => {
   let wrapper
 
   beforeEach(() => {

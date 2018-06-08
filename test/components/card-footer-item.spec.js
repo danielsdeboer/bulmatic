@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Item from '../../src/components/components/Card/Footer/Item.vue'
 
-describe('Container', () => {
+describe('Card Footer Item', () => {
   let wrapper
 
   beforeEach(() => {

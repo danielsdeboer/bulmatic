@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Button from '../../src/components/components/Modal/CloseButton'
 
-describe('Container', () => {
+describe('Modal Close Button', () => {
   let wrapper
 
   beforeEach(() => {

@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Content from '../../src/components/components/Card/Content'
 
-describe('Container', () => {
+describe('Card Content', () => {
   let wrapper
 
   beforeEach(() => {

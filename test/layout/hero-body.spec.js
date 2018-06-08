@@ -3,7 +3,7 @@ import expect from 'expect'
 
 import Body from '../../src/components/layout/Hero/Body.vue'
 
-describe('Container', () => {
+describe('Hero Body', () => {
   let wrapper
 
   beforeEach(() => {
