@@ -27,10 +27,4 @@ describe('Modal', () => {
 
     expect(content.contains('p.test-content')).toBe(true)
   })
-
-  it('has a modal-card div if is-card is true', () => {
-    wrapper.setProps({ isCard: true })
-
-    expect(wrapper.contains('div.modal-card')).toBe(true)
-  })
 })

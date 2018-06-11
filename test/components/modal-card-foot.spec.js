@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import expect from 'expect'
 
-import Footer from '../../src/components/components/Modal/Card/Footer'
+import Footer from '../../src/components/components/Modal/Card/Foot.vue'
 
 describe('Modal Card Footer', () => {
   let wrapper
@@ -11,7 +11,7 @@ describe('Modal Card Footer', () => {
   })
 
   it('outputs a div', () => {
-    expect(wrapper.is('div.modal-card-footer')).toBe(true)
+    expect(wrapper.is('div.modal-card-foot')).toBe(true)
   })
 
   it('has save and cancel buttons by default', () => {
@@ -21,12 +21,12 @@ describe('Modal Card Footer', () => {
     ).toBe(true)
   })
 
-  it('emits a save-changes event on button click', () => {
-    const save = wrapper.find('button.is-success')
+  it('emits a modal-cancel event on button click', () => {
+    const save = wrapper.find('button.is-modal-cancel')
 
     save.trigger('click')
 
-    expect(wrapper.emitted('save-changes')).toBeTruthy()
+    expect(wrapper.emitted('modal-cancel')).toBeTruthy()
   })
 
   it('replaces the buttons with any slotted content', () => {

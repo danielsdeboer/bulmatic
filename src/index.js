@@ -16,7 +16,7 @@ import PaginationEllipsis from './components/components/Pagination/Ellipsis.vue'
 import PaginationIncremental from './components/components/Pagination/Incremental.vue'
 import PaginationLink from './components/components/Pagination/Link.vue'
 import Section from './components/layout/Section.vue'
-import ModalContent from './components/components/Modal/Content'
+import Modal from './components/components/Modal.vue'
 
 export {
   Button,
@@ -37,5 +37,5 @@ export {
   PaginationIncremental,
   PaginationLink,
   Section,
-  ModalContent
+  Modal
 }

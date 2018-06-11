@@ -1,11 +1,20 @@
 <template>
-  <div class="modal">
+  <div class="modal is-active">
     <Background/>
 
     <Card
       v-if="isCard"
+      v-bind="{ titleText }"
+      @modal-cancel="emitCancel"
+      @modal-save-changes="emitSaveChanges"
     >
       <slot/>
+
+      <template
+        slot="foot"
+      >
+        <slot name="foot"/>
+      </template>
     </Card>
 
     <Content
@@ -28,7 +37,7 @@ import Card from './Modal/Card.vue'
 export default {
   props: {
     isCard: bool(false),
-    headText: str(false),
+    titleText: str(false),
   },
 
   components: {
@@ -36,6 +45,16 @@ export default {
     CloseButton,
     Content,
     Card,
+  },
+
+  methods: {
+    emitSaveChanges () {
+      this.$emit('modal-save-changes')
+    },
+
+    emitCancel () {
+      this.$emit('modal-cancel')
+    },
   },
 }
 </script>

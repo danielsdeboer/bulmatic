@@ -25,8 +25,6 @@ describe('Pagination Link', () => {
   it('alternatively takes a textContent prop', () => {
     wrapper = mount(Link, { propsData: { textContent: '88' } })
 
-    console.log(wrapper.html())
-
     expect(wrapper.find('a').text()).toBe('88')
   })
 

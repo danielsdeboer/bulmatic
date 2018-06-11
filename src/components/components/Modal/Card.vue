@@ -1,22 +1,27 @@
 <template>
   <div class="modal-card">
     <Head
-      :title-text="titleText"
+      :text-content="titleText"
     />
 
     <Body>
       <slot/>
     </Body>
 
+    <Foot
+      @modal-cancel="emitCancel"
+      @modal-save-changes="emitSaveChanges"
+    >
+      <slot name="foot"/>
+    </Foot>
   </div>
 </template>
 
 <script>
-import Head from './Card/Head'
+import Head from './Card/Head.vue'
 import Body from './Card/Body.vue'
+import Foot from './Card/Foot.vue'
 import { str } from '../../../functions/validators'
-
-// const renderHead = (h, textContent) => h(Head, { props: { textContent } })
 
 export default {
   props: {
@@ -26,16 +31,18 @@ export default {
   components: {
     Head,
     Body,
+    Foot,
   },
 
-  // render: (h, ctx) => h(
-  //   'div',
-  //   { class: 'modal-card' },
-  //   [
-  //     renderHead(h, ctx.props.titleText),
-  //     ctx.slots().default,
-  //   ]
-  // ),
+  methods: {
+    emitSaveChanges () {
+      this.$emit('modal-save-changes')
+    },
+
+    emitCancel () {
+      this.$emit('modal-cancel')
+    },
+  },
 }
 </script>
 

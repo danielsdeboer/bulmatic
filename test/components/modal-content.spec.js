@@ -30,9 +30,7 @@ describe('Modal Content', () => {
 
   it('accepts text-content', () => {
     wrapper = mount(Content, {
-      context: {
-        props: { textContent: 'passed in via prop' },
-      },
+      propsData: { textContent: 'passed in via prop' },
     })
 
     expect(wrapper.text()).toBe('passed in via prop')

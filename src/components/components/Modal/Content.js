@@ -1,8 +1,15 @@
+import { str } from '../../../functions/validators'
+
 export default {
-  functional: true,
-  render: (h, ctx) => h(
-    'div',
-    { class: 'modal-content' },
-    ctx.props.textContent || ctx.slots().default
-  ),
+  props: {
+    textContent: str(false),
+  },
+
+  render (h) {
+    return h(
+      'div',
+      { class: 'modal-content' },
+      this.textContent || this.$slots.default
+    )
+  },
 }

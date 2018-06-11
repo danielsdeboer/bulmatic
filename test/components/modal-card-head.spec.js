@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import expect from 'expect'
 
-import Head from '../../src/components/components/Modal/Card/Head'
+import Head from '../../src/components/components/Modal/Card/Head.vue'
 
 describe('Modal Card Head', () => {
   let wrapper
@@ -20,15 +20,13 @@ describe('Modal Card Head', () => {
     expect(wrapper.contains('p.testing')).toBe(true)
   })
 
-  it('uses prefers textContent over the default slot', () => {
+  it('prefers textContent over the default slot', () => {
     wrapper = mount(Head, {
       propsData: { textContent: 'is expected' },
       slots: { default: 'is not expected' },
     })
 
-    const title = wrapper.find('modal-card-title')
-
-    console.log(wrapper.html())
+    const title = wrapper.find('.modal-card-title')
 
     expect(title.text()).toBe('is expected')
   })
