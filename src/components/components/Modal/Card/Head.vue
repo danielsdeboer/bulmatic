@@ -12,7 +12,9 @@
       />
     </Title>
 
-    <CloseButton/>
+    <CloseButton
+      @modal-close="emitClose"
+    />
   </div>
 </template>
 
@@ -35,6 +37,12 @@ export default {
   computed: {
     hasTextContent () {
       return !!this.textContent
+    },
+  },
+
+  methods: {
+    emitClose () {
+      this.$emit('modal-close')
     },
   },
 }

@@ -1,12 +1,15 @@
 <template>
   <div class="modal is-active">
-    <Background/>
+    <Background
+      @modal-close="emitClose"
+    />
 
     <Card
       v-if="isCard"
       v-bind="{ titleText }"
       @modal-cancel="emitCancel"
       @modal-save-changes="emitSaveChanges"
+      @modal-close="emitClose"
     >
       <slot/>
 
@@ -23,7 +26,9 @@
       <slot/>
     </Content>
 
-    <CloseButton/>
+    <CloseButton
+      @modal-close="emitClose"
+    />
   </div>
 </template>
 
@@ -54,6 +59,10 @@ export default {
 
     emitCancel () {
       this.$emit('modal-cancel')
+    },
+
+    emitClose () {
+      this.$emit('modal-close')
     },
   },
 }

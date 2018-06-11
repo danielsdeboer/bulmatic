@@ -27,4 +27,12 @@ describe('Modal', () => {
 
     expect(content.contains('p.test-content')).toBe(true)
   })
+
+  it('emits modal-close when lightbox clicked', () => {
+    const lightbox = wrapper.find('div.modal-background')
+
+    lightbox.trigger('click')
+
+    expect(wrapper.emitted('modal-close')).toBeTruthy()
+  })
 })

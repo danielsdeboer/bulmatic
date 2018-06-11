@@ -23,8 +23,10 @@
 
 <script>
   import CardHeader from './Card/Header.vue'
+  /* eslint-disable import/extensions */
   import CardContent from './Card/Content.js'
   import CardFooter from './Card/Footer.js'
+  /* eslint-enable import/extensions */
   import { str } from '../../functions/validators'
 
   export default {

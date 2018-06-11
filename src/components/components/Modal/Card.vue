@@ -2,6 +2,7 @@
   <div class="modal-card">
     <Head
       :text-content="titleText"
+      @modal-close="emitClose"
     />
 
     <Body>
@@ -41,6 +42,10 @@ export default {
 
     emitCancel () {
       this.$emit('modal-cancel')
+    },
+
+    emitClose () {
+      this.$emit('modal-close')
     },
   },
 }

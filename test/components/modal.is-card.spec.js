@@ -77,4 +77,12 @@ describe('Modal', () => {
 
     expect(wrapper.emitted('modal-save-changes')).toBeTruthy()
   })
+
+  it('emits modal-close when close button clicked', () => {
+    const button = wrapper.find('button.delete')
+
+    button.trigger('click')
+
+    expect(wrapper.emitted('modal-close')).toBeTruthy()
+  })
 })

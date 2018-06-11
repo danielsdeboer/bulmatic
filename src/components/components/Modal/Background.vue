@@ -1,3 +1,16 @@
 <template>
-  <div class="modal-background"/>
+  <div
+    @click="emitClose"
+    class="modal-background"
+  />
 </template>
+
+<script>
+  export default {
+    methods: {
+      emitClose () {
+        this.$emit('modal-close')
+      },
+    },
+  }
+</script>
