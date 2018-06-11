@@ -20,10 +20,10 @@
 
 <script>
 import { bool, str } from '../../functions/validators'
-import Background from './Modal/Background'
-import CloseButton from './Modal/CloseButton'
+import Background from './Modal/Background.vue'
+import CloseButton from './Modal/CloseButton.vue'
 import Content from './Modal/Content'
-import Card from './Modal/Card'
+import Card from './Modal/Card.vue'
 
 export default {
   props: {

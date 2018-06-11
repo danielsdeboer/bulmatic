@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import expect from 'expect'
 
-import Card from '../../src/components/components/Modal/Card'
+import Card from '../../src/components/components/Modal/Card.vue'
 
 describe('ModalCard', () => {
   let wrapper
@@ -11,11 +11,8 @@ describe('ModalCard', () => {
       slots: {
         default: '<p class="testing"/>',
       },
-
-      context: {
-        props: {
-          titleText: 'title text',
-        },
+      propsData: {
+        titleText: 'title text',
       },
     })
   })

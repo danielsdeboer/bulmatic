@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import expect from 'expect'
 
-import Button from '../../src/components/components/Modal/CloseButton'
+import Button from '../../src/components/components/Modal/CloseButton.vue'
 
 describe('Modal Close Button', () => {
   let wrapper

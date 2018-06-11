@@ -1,5 +1,5 @@
-import Title from './Title'
-import CloseButton from './CloseButton'
+import Title from './Title.vue'
+import CloseButton from './CloseButton.vue'
 
 export default {
   functional: true,

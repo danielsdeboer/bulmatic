@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import expect from 'expect'
 
-import Background from '../../src/components/components/Modal/Background'
+import Background from '../../src/components/components/Modal/Background.vue'
 
 describe('Modal Background', () => {
   let wrapper
