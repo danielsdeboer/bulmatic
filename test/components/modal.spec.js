@@ -35,4 +35,14 @@ describe('Modal', () => {
 
     expect(wrapper.emitted('modal-close')).toBeTruthy()
   })
+
+  it('has a box unless has-box is false', () => {
+    const box = wrapper.find('div.box')
+
+    expect(box.contains('p.test-content')).toBe(true)
+
+    wrapper.setProps({ hasBox: false })
+
+    expect(wrapper.contains('div.box')).toBe(false)
+  })
 })

@@ -23,7 +23,16 @@
     <Content
       v-else
     >
-      <slot/>
+      <Box
+        v-if="hasBox"
+      >
+        <slot/>
+      </Box>
+
+      <slot
+        v-else
+      />
+
     </Content>
 
     <CloseButton
@@ -38,10 +47,12 @@ import Background from './Modal/Background.vue'
 import CloseButton from './Modal/CloseButton.vue'
 import Content from './Modal/Content'
 import Card from './Modal/Card.vue'
+import Box from '../elements/Box.vue'
 
 export default {
   props: {
     isCard: bool(false),
+    hasBox: bool(true),
     titleText: str(false),
   },
 
@@ -50,6 +61,7 @@ export default {
     CloseButton,
     Content,
     Card,
+    Box,
   },
 
   methods: {
