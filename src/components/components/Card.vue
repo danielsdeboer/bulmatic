@@ -23,8 +23,8 @@
 
 <script>
   import CardHeader from './Card/Header.vue'
-  import CardContent from './Card/Content'
-  import CardFooter from './Card/Footer'
+  import CardContent from './Card/Content.js'
+  import CardFooter from './Card/Footer.js'
   import { str } from '../../functions/validators'
 
   export default {
