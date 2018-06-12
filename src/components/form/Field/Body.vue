@@ -3,7 +3,7 @@
     render (h) {
       return h(
         'div',
-        { class: 'box' },
+        { class: 'field-body' },
         this.$slots.default
       )
     },
@@ -12,6 +12,5 @@
 
 <style lang="sass" scoped>
   @import "~bulma/sass/utilities/_all"
-  @import "~bulma/sass/elements/box.sass"
+  @import "~bulma/sass/elements/form.sass"
 </style>
-

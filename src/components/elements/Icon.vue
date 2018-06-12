@@ -35,7 +35,7 @@
   }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
   @import "~bulma/sass/utilities/_all"
   @import "~bulma/sass/elements/icon.sass"
 </style>

@@ -17,6 +17,9 @@ import PaginationIncremental from './components/components/Pagination/Incrementa
 import PaginationLink from './components/components/Pagination/Link.vue'
 import Section from './components/layout/Section.vue'
 import Modal from './components/components/Modal.vue'
+import Box from './components/elements/Box.vue'
+import Field from './components/form/Field.vue'
+import HorizontalField from './components/form/HorizontalField.vue'
 
 export {
   Button,
@@ -37,5 +40,8 @@ export {
   PaginationIncremental,
   PaginationLink,
   Section,
-  Modal
+  Modal,
+  Box,
+  Field,
+  HorizontalField
 }

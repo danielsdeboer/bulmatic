@@ -75,7 +75,7 @@
   }
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
   @import "~bulma/sass/utilities/_all"
   @import "~bulma/sass/layout/hero.sass"
 </style>

@@ -36,6 +36,8 @@ export const hero = [
   'fullheight',
 ]
 
+export const fieldLabel = ['normal'].concat('generic')
+
 export default {
   column,
   generic,
