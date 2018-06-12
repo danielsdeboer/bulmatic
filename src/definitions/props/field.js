@@ -1,4 +1,4 @@
-import { bool } from '../../functions/validators'
+import { bool, str } from '../../functions/validators'
 
 export const bools = {
   hasAddons: bool(false),
@@ -10,4 +10,8 @@ export const bools = {
   isGroupedMultiline: bool(false),
 }
 
-export default bools
+export const strings = {
+  labelText: str(false),
+}
+
+export default Object.assign({}, bools, strings)

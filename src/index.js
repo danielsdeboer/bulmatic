@@ -19,6 +19,8 @@ import Section from './components/layout/Section.vue'
 import Modal from './components/components/Modal.vue'
 import Box from './components/elements/Box.vue'
 import Field from './components/form/Field.vue'
+import Control from './components/form/Control.vue'
+import Label from './components/form/Label.vue'
 import HorizontalField from './components/form/HorizontalField.vue'
 
 export {
@@ -43,5 +45,7 @@ export {
   Modal,
   Box,
   Field,
-  HorizontalField
+  HorizontalField,
+  Control,
+  Label
 }

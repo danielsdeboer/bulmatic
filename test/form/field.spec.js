@@ -26,5 +26,14 @@ describe('Field', () => {
     expect(wrapper.contains('p.para'))
   })
 
+  it('renders a simple label when label-text is set', () => {
+    const labelText = 'here is a simple label'
+    wrapper.setProps({ labelText })
+
+    const label = wrapper.find('label.label')
+
+    expect(label.text()).toBe(labelText)
+  })
+
   boolPropsTest(Object.keys(bools), 'div.field', fresh)
 })
