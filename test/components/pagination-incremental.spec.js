@@ -41,6 +41,7 @@ describe('Pagination Incremental', () => {
   })
 
   it('emits a page change event when clicked', () => {
+    wrapper.setProps({ isDisabled: false })
     wrapper.trigger('click')
 
     expect(wrapper.emitted('previous-page')).toBeTruthy()

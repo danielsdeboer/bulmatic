@@ -52,4 +52,12 @@ describe('Card', () => {
 
     expect(wrapper.emitted('header-icon-click')[0]).toEqual([{ cardName: 'somename' }])
   })
+
+  it('has an optional card name', () => {
+    expect(wrapper.vm.computedCardName).toBe('')
+
+    wrapper.setProps({ cardName: 'some name' })
+
+    expect(wrapper.vm.computedCardName).toBe('some name')
+  })
 })

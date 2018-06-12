@@ -3,7 +3,7 @@
     :class="cssClass"
     v-text="text"
     :disabled="isDisabled"
-    @click.prevent="emitPageChange($event.target.attributes)"
+    @click.prevent="emitPageChange"
   />
 </template>
 
@@ -29,10 +29,8 @@
     },
 
     methods: {
-      emitPageChange (attr) {
-        if (!attr.disabled) {
-          this.$emit(`${this.direction}-page`)
-        }
+      emitPageChange () {
+        !this.isDisabled && this.$emit(`${this.direction}-page`)
       },
     },
   }

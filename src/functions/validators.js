@@ -12,13 +12,13 @@ const propName = value => (
  * Compose a validator for multiple types.
  * @param {array} types
  * @param {bool|*} reqOrDef
- * @param {array|null} validation
+ * @param {Function} validation
  * @returns {Object}
  */
-export const multi = (types, reqOrDef, validation = null) => Object.assign({
+export const multi = (types, reqOrDef, validator = null) => ({
   type: types,
   [propName(reqOrDef)]: reqOrDef,
-  ...!!validation && { validator: value => validation.includes(value) },
+  ...!!validator && { validator },
 })
 
 /**
@@ -34,7 +34,7 @@ export const str = (reqOrDef, validation = null) => ({
 
 /**
  * Compose a validator for a boolean.
- * @param {*} def
+ * @param {boolean} def
  */
 export const bool = (def = false) => ({
   type: Boolean,
@@ -62,7 +62,7 @@ export const obj = reqOrDef => ({
  * @param {boolean} required
  * @returns {Object}
  */
-export const objOf = (type, required) => ({
+export const objOf = (type, required = false) => ({
   type,
   required,
 })
