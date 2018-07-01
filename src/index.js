@@ -22,6 +22,7 @@ import Field from './components/form/Field.vue'
 import Control from './components/form/Control.vue'
 import Label from './components/form/Label.vue'
 import HorizontalField from './components/form/HorizontalField.vue'
+import Notification from './components/elements/Notification.vue'
 
 export {
   Button,
@@ -47,5 +48,6 @@ export {
   Field,
   HorizontalField,
   Control,
-  Label
+  Label,
+  Notification
 }

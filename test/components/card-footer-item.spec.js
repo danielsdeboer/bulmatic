@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils'
+import { shallowMount as shallow } from '@vue/test-utils'
 import expect from 'expect'
 
 import Item from '../../src/components/components/Card/Footer/Item.vue'
@@ -7,7 +7,7 @@ describe('Card Footer Item', () => {
   let wrapper
 
   beforeEach(() => {
-    wrapper = mount(Item, {
+    wrapper = shallow(Item, {
       slots: {
         default: 'Click To Emit',
       },
@@ -31,11 +31,13 @@ describe('Card Footer Item', () => {
   it('attaches the item name as a payload if set', () => {
     wrapper.trigger('click')
 
-    expect(wrapper.emitted('footer-item-click')[0]).toEqual([{ itemName: '' }])
+    expect(wrapper.emitted('footer-item-click')[0])
+      .toEqual([{ itemName: '' }])
 
     wrapper.setProps({ itemName: 'testing' })
     wrapper.trigger('click')
 
-    expect(wrapper.emitted('footer-item-click')[1]).toEqual([{ itemName: 'testing' }])
+    expect(wrapper.emitted('footer-item-click')[1])
+      .toEqual([{ itemName: 'testing' }])
   })
 })
