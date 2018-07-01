@@ -33,7 +33,7 @@ describe('Card', () => {
   it('has a footer if the footer slot is used', () => {
     expect(wrapper.contains('.card-footer')).toBe(false)
 
-    wrapper = mount(Card, { slots: { footer: 'now there is a footer' } })
+    wrapper = mount(Card, { slots: { footer: '<p>now there is a footer</p>' } })
 
     expect(wrapper.contains('.card-footer')).toBe(true)
   })

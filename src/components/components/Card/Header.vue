@@ -8,7 +8,6 @@
     <a
       @click.prevent="emitIconClick"
       v-if="hasIcon"
-      href="#"
       class="card-header-icon"
     >
       <Icon

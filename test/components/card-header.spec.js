@@ -34,7 +34,7 @@ describe('Card Header', () => {
   it('emits a icon-click event when the icon is clicked', () => {
     wrapper.setProps({ icon: 'fas fa-user' })
 
-    const icon = wrapper.find(Icon)
+    const icon = wrapper.find('a.card-header-icon')
 
     icon.trigger('click')
 
