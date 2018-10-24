@@ -42,10 +42,3 @@
   .input
     box-sizing: border-box
 </style>
-
-
-<style lang="sass" scoped>
-  @import "~bulma/sass/utilities/_all"
-  @import "~bulma/sass/elements/form.sass"
-</style>
-

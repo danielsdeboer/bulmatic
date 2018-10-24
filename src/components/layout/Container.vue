@@ -18,9 +18,3 @@
     },
   }
 </script>
-
-<style lang="sass" scoped>
-  @import "~bulma/sass/utilities/_all"
-  @import "~bulma/sass/elements/container.sass"
-</style>
-

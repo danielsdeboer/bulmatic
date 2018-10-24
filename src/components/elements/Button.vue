@@ -78,9 +78,3 @@
     },
   }
 </script>
-
-<style lang="sass" scoped>
-  @import "~bulma/sass/utilities/_all"
-  @import "~bulma/sass/elements/button.sass"
-</style>
-

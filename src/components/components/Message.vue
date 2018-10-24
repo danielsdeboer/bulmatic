@@ -62,11 +62,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-  @import "~bulma/sass/utilities/_all"
-  @import "~bulma/sass/components/message"
-</style>
-
-<style lang="sass" scoped>
   .is-bordered
     .message-body
       border-width: 1px

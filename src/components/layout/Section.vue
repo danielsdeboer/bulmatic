@@ -35,11 +35,6 @@
 </script>
 
 <style lang="sass" scoped>
-  @import "~bulma/sass/utilities/_all"
-  @import "~bulma/sass/layout/section.sass"
-</style>
-
-<style lang="sass" scoped>
   .is-in-flow
     padding-top: 0;
     padding-bottom: 0;
