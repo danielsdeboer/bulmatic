@@ -36,9 +36,9 @@
 
 <style lang="sass" scoped>
   .is-in-flow
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-bottom: 1.5rem;
+    padding-top: 0
+    padding-bottom: 0
+    margin-bottom: 1.5rem
 </style>
 
 
