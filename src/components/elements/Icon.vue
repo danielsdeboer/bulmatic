@@ -4,7 +4,12 @@
     :class="containerClasses"
   >
     <i
+      v-if="hasIcon"
       :class="iconClasses"
+    />
+
+    <slot
+      v-else
     />
   </span>
 </template>
@@ -17,7 +22,7 @@
 
   export default {
     props: Object.assign({}, props, {
-      icon: str(true),
+      icon: str(),
     }),
 
     computed: {
@@ -30,6 +35,10 @@
 
       iconClasses () {
         return this.icon
+      },
+
+      hasIcon () {
+        return !!this.icon
       },
     },
   }

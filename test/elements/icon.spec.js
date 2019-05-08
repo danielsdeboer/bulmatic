@@ -33,4 +33,26 @@ describe('Icon', () => {
 
     expect(wrapper.contains('span.icon.has-text-danger')).toBe(true)
   })
+
+  it('slots content if no icon is passed in', () => {
+    const cssClass = 'icon-slot-content'
+    const slots = {
+      default: `<div class="${cssClass}"/>`,
+    }
+    const propsData = {
+      icon: 'icon-class icon-class-modifier',
+    }
+
+    const withoutIcon = mount(Icon, {
+      slots,
+    })
+
+    const withIcon = mount(Icon, {
+      slots,
+      propsData,
+    })
+
+    expect(withoutIcon.contains(`div.${cssClass}`)).toBe(true)
+    expect(withIcon.contains(`div.${cssClass}`)).toBe(false)
+  })
 })
