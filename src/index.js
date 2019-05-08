@@ -24,6 +24,9 @@ import Label from './components/form/Label.vue'
 import HorizontalField from './components/form/HorizontalField.vue'
 import Notification from './components/elements/Notification.vue'
 import Footer from './components/layout/Footer.vue'
+import Menu from './components/components/Menu.vue'
+import MenuLabel from './components/components/Menu/Label.vue'
+import MenuList from './components/components/Menu/List.vue'
 
 export {
   Button,
@@ -52,5 +55,11 @@ export {
   Label,
   Notification,
   Footer,
-  Footer as BulmaFooter
+  Footer as BulmaFooter,
+  Menu,
+  Menu as BulmaMenu,
+  MenuLabel,
+  MenuLabel as BulmaMenuLabel,
+  MenuList,
+  MenuList as BulmaMenuList
 }

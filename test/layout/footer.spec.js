@@ -4,7 +4,7 @@ import rcc from '../functions/random-css-class'
 
 import Footer from '../../src/components/layout/Footer.vue'
 
-describe('Container', () => {
+describe('Footer', () => {
   const cssClass = rcc()
   let component
 
