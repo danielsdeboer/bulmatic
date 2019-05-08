@@ -23,6 +23,7 @@ import Control from './components/form/Control.vue'
 import Label from './components/form/Label.vue'
 import HorizontalField from './components/form/HorizontalField.vue'
 import Notification from './components/elements/Notification.vue'
+import Footer from './components/layout/Footer.vue'
 
 export {
   Button,
@@ -49,5 +50,7 @@ export {
   HorizontalField,
   Control,
   Label,
-  Notification
+  Notification,
+  Footer,
+  Footer as BulmaFooter
 }
