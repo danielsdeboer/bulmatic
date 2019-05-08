@@ -7,7 +7,7 @@
       v-if="hasButton"
       @click.prevent="buttonPress"
       class="delete"
-    ></button>
+    />
     <slot/>
   </div>
 </template>
