@@ -3,22 +3,15 @@
     class="level"
     :class="classes"
   >
-    <LevelLeft
-      v-if="$slots.left"
+    <LevelLeft v-if="hasLeftSlot"
     >
-      <slot
-        name="left"
-      />
+      <slot name="left"/>
     </LevelLeft>
 
     <slot/>
 
-    <LevelRight
-      v-if="$slots.right"
-    >
-      <slot
-        name="right"
-      />
+    <LevelRight v-if="hasRightSlot">
+      <slot name="right"/>
     </LevelRight>
   </div>
 </template>
@@ -41,6 +34,14 @@
     computed: {
       classes () {
         return boolToClass(this, bools)
+      },
+
+      hasLeftSlot () {
+        return !!this.$slots.left
+      },
+
+      hasRightSlot () {
+        return !!this.$slots.right
       },
     },
   }

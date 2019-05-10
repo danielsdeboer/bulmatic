@@ -45,7 +45,7 @@
     "mocha": "^5.2.0",
     "mocha-webpack": "^1.1.0",
     "node-sass": "^4.11.0",
-    "nyc": "^14.0.0",
+    "nyc": "^14.1.1",
     "path": "^0.12.7",
     "randomstring": "^1.1.5",
     "sass-loader": "^7.1.0",
