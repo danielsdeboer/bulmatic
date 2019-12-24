@@ -5,8 +5,8 @@ import boolPropsTest from '../functions/bool-props-test'
 
 import Column from '../../src/components/columns/Column.vue'
 
-describe('Columns', () => {
-  let component
+describe('Column', () => {
+  let wrapper
 
   const fresh = () => mount(Column, {
     slots: {
@@ -18,28 +18,30 @@ describe('Columns', () => {
   const baseClass = 'div.column'
 
   beforeEach(() => {
-    component = fresh()
+    wrapper = fresh()
   })
 
   it('outputs a div with a column class', () => {
-    expect(component.is(baseClass)).toBe(true)
+    expect(wrapper.is(baseClass)).toEqual(true)
   })
 
   it('slots content', () => {
-    expect(component.findAll('div.test-div').length).toBe(1)
+    expect(wrapper.findAll('div.test-div').length).toBe(1)
   })
 
   boolPropsTest(boolNames, baseClass, fresh)
 
   it('has size classes', () => {
-    component.setProps({ size: 'one-quarter' })
+    wrapper.setProps({ size: 'one-quarter' })
 
-    expect(component.is(`${baseClass}.is-one-quarter`)).toBe(true)
+    console.log(wrapper.vm.size)
+
+    expect(wrapper.is(`${baseClass}.is-one-quarter`)).toBe(true)
   })
 
   it('has offset classes', () => {
-    component.setProps({ offset: 'one-quarter' })
+    wrapper.setProps({ offset: 'one-quarter' })
 
-    expect(component.is(`${baseClass}.is-offset-one-quarter`)).toBe(true)
+    expect(wrapper.is(`${baseClass}.is-offset-one-quarter`)).toBe(true)
   })
 })

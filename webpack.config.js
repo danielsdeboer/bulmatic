@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const externals = require('webpack-node-externals')()
+const externals = require('webpack-node-externals')
 
 module.exports = {
   entry: './src/index.js',
@@ -71,6 +71,6 @@ if (process.env.NODE_ENV === 'production') {
 
 // test specific setups
 if (process.env.NODE_ENV === 'test') {
-  module.exports.externals = [externals]
+  module.exports.externals = [externals()]
   module.exports.devtool = 'eval'
 }
